@@ -1,0 +1,60 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.local
+**/.env.production
+
+# Python
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.py[cod]
+*.egg-info/
+
+# Runtime databases and files
+*.db
+*.db-shm
+*.db-wal
+backend/storage/*
+!backend/storage/inspections/
+!backend/storage/reports/
+!backend/storage/inspections/.gitkeep
+!backend/storage/reports/.gitkeep
+backups/
+logs/
+
+# Downloaded datasets and trained optional models
+backend/ml/data/**
+!backend/ml/data/**/.gitkeep
+backend/ml/models/*
+!backend/ml/models/predictive_maintenance.joblib
+!backend/ml/models/predictive_maintenance.metadata.json
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary release artifacts
+*.zip
+*.sha256

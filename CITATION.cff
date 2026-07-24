@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use ForgeMind AI in research or a technical demonstration, please cite this repository."
+title: "ForgeMind AI"
+type: software
+authors:
+  - family-names: "Ktich"
+    given-names: "Mohamad Abdullatif"
+    email: "ktichmohamad@gmail.com"
+    website: "https://www.linkedin.com/in/mohamad-ktich"
+repository-code: "https://github.com/MohamadKtich/forgemind-ai"
+url: "https://github.com/MohamadKtich/forgemind-ai"
+license: MIT
+version: 3.0.0
+date-released: 2026-07-22
+keywords:
+  - industrial-ai
+  - predictive-maintenance
+  - computer-vision
+  - smart-manufacturing
+  - digital-twin

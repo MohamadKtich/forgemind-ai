@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <main className="grid min-h-screen place-items-center p-6 text-center"><div><p className="text-8xl font-black text-cyan-300">404</p><h1 className="mt-4 text-2xl font-bold">This machine cell does not exist.</h1><Link href="/dashboard" className="btn mt-6">Return to dashboard</Link></div></main>}

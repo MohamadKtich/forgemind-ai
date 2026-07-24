@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: "1. Start...
+2. Open...
+3. Observe..."
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Windows 11, Python 3.12, Node 22
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: shell
+  - type: checkboxes
+    id: secrets
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed passwords, tokens, connection strings, and private factory data.
+          required: true

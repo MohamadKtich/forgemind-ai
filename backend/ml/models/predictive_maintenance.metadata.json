@@ -1,0 +1,116 @@
+{
+  "model_name": "Logistic Regression",
+  "model_version": "3.0-generic-fallback",
+  "dataset": "ForgeMind deterministic engineering benchmark aligned to common predictive-maintenance ranges; not real plant telemetry.",
+  "dataset_rows": 9000,
+  "features": [
+    "temperature",
+    "vibration",
+    "pressure",
+    "rpm",
+    "torque",
+    "power",
+    "operating_hours",
+    "tool_wear",
+    "age_years"
+  ],
+  "target": "machine failure within the operating window",
+  "metrics": {
+    "accuracy": 0.9303,
+    "precision": 0.3162,
+    "recall": 0.3895,
+    "f1": 0.3491,
+    "roc_auc": 0.7727,
+    "decision_threshold": 0.75,
+    "confusion_matrix": [
+      [
+        1805,
+        80
+      ],
+      [
+        58,
+        37
+      ]
+    ]
+  },
+  "comparisons": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.9303,
+      "precision": 0.3162,
+      "recall": 0.3895,
+      "f1": 0.3491,
+      "roc_auc": 0.7727,
+      "decision_threshold": 0.75,
+      "confusion_matrix": [
+        [
+          1805,
+          80
+        ],
+        [
+          58,
+          37
+        ]
+      ]
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.9394,
+      "precision": 0.3134,
+      "recall": 0.2211,
+      "f1": 0.2593,
+      "roc_auc": 0.6619,
+      "decision_threshold": 0.75,
+      "confusion_matrix": [
+        [
+          1839,
+          46
+        ],
+        [
+          74,
+          21
+        ]
+      ]
+    },
+    {
+      "model": "Gradient Boosting",
+      "accuracy": 0.9227,
+      "precision": 0.2698,
+      "recall": 0.3579,
+      "f1": 0.3077,
+      "roc_auc": 0.7718,
+      "decision_threshold": 0.605,
+      "confusion_matrix": [
+        [
+          1793,
+          92
+        ],
+        [
+          61,
+          34
+        ]
+      ]
+    }
+  ],
+  "feature_importance": {
+    "tool_wear": 0.27035,
+    "power": 0.13643,
+    "torque": 0.13507,
+    "vibration": 0.11897,
+    "temperature": 0.09886,
+    "rpm": 0.09658,
+    "age_years": 0.06435,
+    "operating_hours": 0.05439,
+    "pressure": 0.02499
+  },
+  "limitations": [
+    "This bundled model is an offline fallback trained on generated benchmark data, not measured factory telemetry.",
+    "Install the MetroPT-3 real-data bundle for air-compressor assets or train on plant-specific labeled data.",
+    "Thresholds must be validated against the target factory and machine family.",
+    "Predictions support maintenance decisions and do not replace certified safety systems."
+  ],
+  "runtime_mode": "generic_local_fallback",
+  "data_provenance": "deterministically generated engineering benchmark; not measured factory data",
+  "license": "project-generated benchmark",
+  "installed": true
+}

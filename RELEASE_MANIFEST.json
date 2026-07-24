@@ -1,0 +1,37 @@
+{
+  "project": "ForgeMind AI",
+  "release": "GitHub-ready source release",
+  "version": "3.0.0",
+  "date": "2026-07-22",
+  "owner": {
+    "name": "Mohamad Abdullatif Ktich",
+    "linkedin": "https://www.linkedin.com/in/mohamad-ktich",
+    "github": "https://github.com/MohamadKtich",
+    "email": "ktichmohamad@gmail.com"
+  },
+  "license": "MIT",
+  "verification": {
+    "backend_tests": "9 passed",
+    "backend_smoke": "health, login, dashboard, and model registry passed",
+    "python_compile": "passed",
+    "database_migration_helper": "SQLite-to-SQLite test passed",
+    "secret_preflight": "passed",
+    "frontend_syntax": "31 TypeScript/TSX files parsed successfully",
+    "frontend_build": "CI and VERIFY_PROJECT.bat configured; baseline release was production-built before repository packaging"
+  },
+  "ai_disclosure": {
+    "bundled_predictive_model": "generated benchmark-style training data",
+    "real_data_pipelines": [
+      "MetroPT-3",
+      "KSDD"
+    ],
+    "real_data_weights_included": false
+  },
+  "file_count": 132,
+  "key_hashes": {
+    "backend_model": "2467a78c66e01721b5a04ba389afb38408b910cab3b37efd9c07aa2d1e39f57b",
+    "backend_model_metadata": "9e326d2378130d2619030c10a111c20aed73401f7faf466dca2e65ca8fee1613",
+    "frontend_lockfile": "9cc59f3f402c8047aef87e29b8764485d87bc0b204fba66f80eb12cc5de92fc6",
+    "supabase_schema": "18231b183dd7950ed89072d6bf5a0595926c3a84f9c473f57f8fb247f8051895"
+  }
+}

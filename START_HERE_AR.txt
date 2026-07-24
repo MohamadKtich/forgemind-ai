@@ -1,0 +1,36 @@
+ForgeMind AI - ابدأ من هنا
+================================
+
+1) فك ضغط المشروع داخل مجلد عادي.
+2) ثبّت Python 3.11+ و Node.js 22 LTS+.
+3) شغّل SETUP_WINDOWS.bat مرة واحدة.
+4) شغّل START_FORGEMIND.bat.
+5) افتح http://localhost:3000
+
+اللغة والمظهر:
+- استخدم أزرار اللغة والثيم أسفل الشاشة.
+- العربية تعمل باتجاه RTL.
+- يوجد Light وDark وSystem theme.
+
+حساب مدير المصنع:
+manager@forgemind.ai
+ForgeMind#2026
+
+حساب المدير العام:
+admin@forgemind.ai
+ForgeMind#2026
+
+توثيق API:
+http://localhost:8000/docs
+
+تدريب البيانات الحقيقية:
+TRAIN_REAL_MODELS.bat
+
+الدليل العربي:
+docs/QUICK_START_AR.md
+
+مهم: غيّر كلمات المرور وSECRET_KEY وDEVICE_API_KEY وLOCAL_RECOVERY_KEY قبل مشاركة التطبيق.
+
+
+الحقوق: Mohamad Abdullatif Ktich
+LinkedIn: https://www.linkedin.com/in/mohamad-ktich

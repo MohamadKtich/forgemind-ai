@@ -1,0 +1,37 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////app/data/forgemind.db}
+      STORAGE_DIR: /app/data/storage
+      PREDICTIVE_MODEL_PATH: /app/ml/models/predictive_maintenance.joblib
+      PREDICTIVE_METADATA_PATH: /app/ml/models/predictive_maintenance.metadata.json
+      METROPT_MODEL_PATH: /app/ml/models/metropt_air_compressor.joblib
+      METROPT_METADATA_PATH: /app/ml/models/metropt_air_compressor.metadata.json
+      QUALITY_MODEL_PATH: /app/ml/models/quality_inspector.joblib
+      QUALITY_METADATA_PATH: /app/ml/models/quality_inspector.metadata.json
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      SECRET_KEY: ${SECRET_KEY:-replace-this-before-shared-deployment}
+      DEVICE_API_KEY: ${DEVICE_API_KEY:-replace-this-device-key}
+      LOCAL_RECOVERY_KEY: ${LOCAL_RECOVERY_KEY:-replace-this-recovery-key}
+      SEED_DEFAULT_USERS: ${SEED_DEFAULT_USERS:-true}
+    volumes:
+      - forgemind-data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  forgemind-data:
